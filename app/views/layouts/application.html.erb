@@ -11,6 +11,10 @@
   </head>
 
   <body>
+  <%= link_to 'Nuevo Usuario', new_user_session_path %>
+  <%= link_to 'registrar', new_user_registration_path %>
+  <%= link_to 'salir', destroy_user_session_path, method: :delete %>
+
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
