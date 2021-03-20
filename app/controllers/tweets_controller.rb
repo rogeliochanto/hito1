@@ -57,6 +57,12 @@ class TweetsController < ApplicationController
     end
   end
 
+  def like
+    @tweet = Tweet.all.find(params[:id])
+    Like.create(user_id: current_user.id, tweet_id: @tweet.id)
+    redirect_to tweet_parh(@tweet)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
